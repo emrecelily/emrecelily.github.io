@@ -2,25 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    
+
     .flex-container {
       display: flex;
-      flex-wrap: wrap; 
-      justify-content: space-around; 
-      align-items: center; 
-      height: 20px; 
-      border: 1px solid rgb(0, 0, 0); 
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      border: 1px solid #000000;
     }
 
     .flex-item {
-      width: 50px; 
-      height: 20px; 
-      background-color: rgba(163, 163, 163, 0.81); 
-      margin: px; 
+      width: 80px;
+      height: 40px;
+      background-color: #000000;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+   
+    @media screen and (max-width: 1600px) {
+      
+      .flex-container {
+        flex-direction: row; 
+      }
+    }
+
+    @media screen and (min-width: 1601px) {
+     
+      .flex-container {
+        flex-direction: column; 
+      }
     }
   </style>
-  <title>Responsive Örneği</title>
+  <title>Responsive Flexbox Model</title>
 </head>
 <body>
 
