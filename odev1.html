@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .shape {
+      position: absolute;
+      transform-origin: center;
+      animation: grow 2s infinite alternate;
+    }
+
+    #triangle {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 87px solid red;
+      animation-name: rotateTriangle;
+      top: 50%;
+      left: 20%;
+    }
+
+    #square {
+      width: 50px;
+      height: 50px;
+      background-color: green;
+      animation-name: moveRightLeft, changeColorSquare;
+      top: 10%;
+      left: 75%;
+    }
+
+    #circle {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      border-radius: 50%;
+      animation-name: moveUpDown;
+      top: 75%;
+      left: 75%;
+    }
+
+    #rectangle {
+      width: 80px;
+      height: 50px;
+      background-color: rgba(255, 0, 0, 0.7);
+      animation-name: changeTransparency;
+      top: 75%;
+      left: 10%;
+    }
+
+    #hexagon {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 87px solid purple;
+      animation-name: changeColorHexagon, rotateHexagon;
+      top: 10%;
+      left: 10%;
+    }
+
+    @keyframes rotateTriangle {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes moveRightLeft {
+      0%, 100% {
+        left: 75%;
+      }
+      50% {
+        left: 10%;
+      }
+    }
+
+    @keyframes moveUpDown {
+      0%, 100% {
+        top: 75%;
+      }
+      50% {
+        top: 10%;
+      }
+    }
+
+    @keyframes changeTransparency {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.3;
+      }
+    }
+
+    @keyframes rotateHexagon {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes changeColorHexagon {
+      0% {
+        background-color: purple;
+      }
+      50% {
+        background-color: orange;
+      }
+      100% {
+        background-color: purple;
+      }
+    }
+
+    @keyframes changeColorSquare {
+      0% {
+        background-color: green;
+      }
+      50% {
+        background-color: yellow;
+      }
+      100% {
+        background-color: green;
+      }
+    }
+
+    @keyframes grow {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.5);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="triangle" class="shape"></div>
+    <div id="square" class="shape"></div>
+    <div id="circle" class="shape"></div>
+    <div id="rectangle" class="shape"></div>
+    <div id="hexagon" class="shape"></div>
+  </div>
+
+</body>
+</html>
+
+
