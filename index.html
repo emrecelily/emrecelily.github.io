@@ -5,64 +5,89 @@
     <meta charset="UTF-8">
     <title>Emre Celil Yıldırım</title>
     <style>
-        body {
+          body {
             margin: 0;
-            padding: 0;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #1a1a1a;
+            color: #ffffff;
         }
 
-        header {
-            background-color: #e1ff00;
-            color: #000000;
-            text-align: center;
-            padding: 25px;
+        #particles-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
 
         h1 {
-            font-size: 40px;
-        }
-
-        nav {
-            background-color: #b5b5b5;
-            color: #000000;
-            padding: 15px;
+            font-size: 3em;
             text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
+        p {
+            font-size: 1.2em;
+            text-align: center;
+            max-width: 600px;
+            margin: 20px auto;
         }
 
-        nav ul li {
-            margin: 10px 0;
+        .particle {
+            position: absolute;
+            background-color: #4caf50;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            animation: moveParticle linear infinite;
         }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #00ffdd;
-            font-weight: bold;
-        }
-
-        ol {
-            list-style-type: decimal;
-            margin-left: 20px;
-            padding: 20px;
-        }
-
-
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            padding: 10px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #00ffdd;
+        @keyframes moveParticle {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+            }
         }
     </style>
 </head>
 <body>
+    <div id="particles-container"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const particlesContainer = document.getElementById('particles-container');
+
+            for (let i = 0; i < 100; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.animationDuration = (Math.random() * 2 + 1) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const particlesContainer = document.getElementById('particles-container');
+
+            for (let i = 0; i < 100; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.animationDuration = (Math.random() * 2 + 1) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        });
+    </script>
     <header>
         <h1>Emre Celil Yıldırım</h1>
     </header>
