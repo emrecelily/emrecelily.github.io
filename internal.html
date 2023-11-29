@@ -4,126 +4,155 @@
     <meta charset="UTF-8">
     <title>Internal</title>
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ecf0f1;
+        }
+
         table {
             border-collapse: collapse;
-            border: 1px solid black;
-            text-align: center;
-            font-family: 'Arial', sans-serif;
-            width: 100%;
+            width: 80%;
+            margin: 20px auto;
         }
 
         th, td {
-            border: 1px solid black;
-            padding: 10px;
-            font-size: 12px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
         }
 
-        th {
-            background-color: rgb(52, 219, 60);
-            font-weight: bold;
+        .head {
+            background-color: #3498db;
             color: #fff;
-            font-size: 14px;
         }
 
-        .ders-header {
+        tr:nth-child(odd) {
+            background-color: #ecf0f1;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        th:first-child {
             background-color: #e74c3c;
             color: #fff;
         }
 
-        .ders-odd {
-            background-color: #ecf0f1;
+        td:nth-child(3), td:nth-child(4), td:nth-child(5) {
+            background-color: #d35400;
+            color: #fff;
         }
 
-        .ders-even {
-            background-color: #f2f2f2;
+        td:nth-child(6) {
+            background-color: #27ae60;
+            color: #fff;
+        }
+
+        td:nth-child(7), td:nth-child(8) {
+            background-color: #f39c12;
+            color: #fff;
+        }
+
+        td:nth-child(9), td:nth-child(10) {
+            background-color: #8e44ad;
+            color: #fff;
+        }
+
+        td:nth-child(11), td:nth-child(12) {
+            background-color: #c0392b;
+            color: #fff;
         }
     </style>
 </head>
 <body>
     <table>
         <thead>
-            <tr class="ders-header">
-                <th>Ders</th>
-                <th>Saat</th>
-                <th>Pazartesi</th>
-                <th>Salı</th>
-                <th>Çarşamba</th>
-                <th colspan="2">Perşembe</th>
-                <th colspan="2">Cuma</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="ders-odd">
-                <td class="ders-header">1. Ders</td>
-                <td>08:40- <br>09:30</td>
-                <td rowspan="2">BTE307 <br> Eğitimde <br> Modelleme <br> ve Tasarım</td>
-                <td rowspan="2"></td>
-                <td></td>
-                <td rowspan="2">BTE228 <br> Medya <br> Okuryazarlığı</td>
-                <td rowspan="2">BTO311 <br>İşletim  <br> Sistemleri</td>
-                <td rowspan="3">BTE311(BTÖ311) <br> İnternet Tabanlı <br>Programlama</td>
-                <td rowspan="4">BTÖ317 <br>Özel Öğretim <br>Yöntemleri I</td>
-            </tr>
-            <tr class="ders-even">
-                <td class="ders-header">2. Ders</td>
-                <td>09:40- <br>10:30</td>
-                <td></td>
-            </tr>
-            <tr class="ders-odd">
-                <td class="ders-header">3. Ders</td>
-                <td>10:40- <br>11:30</td>
-                <td rowspan="2">BTE307 <br> Eğitimde <br> Modelleme <br> ve Tasarım</td>
-                <td></td>
-                <td></td>
-                <td rowspan="2">BTE313 <br> Eğitsel Video <br> Tasarımı</td>
-                <td rowspan="2">BTO311 <br>İşletim  <br> Sistemleri</td>
-            </tr>
-            <tr class="ders-even">
-                <td class="ders-header">4. Ders</td>
-                <td>11:40- <br>12:30</td>
-                <td></td>
-                <td rowspan="2">BTE309 <br>Bilişim <br> Öğretim <br> Programları </td>
-                <td rowspan="2">BTE311(BTÖ311) <br> İnternet Tabanlı <br>Programlama</td>
-            </tr>
-            <tr class="ders-odd">
-                <td class="ders-header">5. Ders</td>
-                <td>12:40- <br>13:30</td>
-                <td></td>
-                <td></td>  
-                <td colspan="2"></td>
-                <td></td>
-            </tr>
-            <tr class="ders-even">
-                <td class="ders-header">6. Ders</td>
-                <td>13:40- <br>14:30</td>
-                <td rowspan="2">BTE307 <br> Eğitimde <br> Modelleme <br> ve Tasarım</td>
-                <td rowspan="2"></td>
-                <td rowspan="4"></td>
-                <td colspan="2"></td>
-                <td rowspan="2">BTE311(BTÖ311)<br>İnternet Tabanlı <br>Programlama</td>
-                <td></td>
-            </tr>
-            <tr class="ders-odd">
-                <td class="ders-header">7. Ders</td>
-                <td>14:40- <br>15:30</td>
-                <td colspan="2"></td> 
-                <td></td>
-            </tr>
-            <tr class="ders-even">
-                <td class="ders-header">8. Ders</td>
-                <td>15:40- <br>16:30</td>
-                <td rowspan="2">BTE307 <br> Eğitimde <br> Modelleme <br> ve Tasarım</td>
-                <td rowspan="2"></td>
-                <td colspan="2"></td>
-                <td colspan="2"></td>
-            </tr>
-            <tr class="ders-odd">
-                <td class="ders-header">9. Ders</td>
-                <td>16:40- <br>17:30</td>
-                <td colspan="2"></td>
-                <td colspan="2"></td>
-            </tr>
-        </tbody>
+        <tr class="head">
+            <th>Ders</th>
+            <th>Saat</th>
+            <th>Pazartesi</th>
+            <th>Salı</th>
+            <th>Çarşamba</th>
+            <th colspan="2">Perşembe</th>
+            <th colspan="2">Cuma</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1. Ders</th>
+            <td>08:40- <br>09:30</td>
+            <td rowspan="2">BTE307 <br> Eğitimde <br> Modelleme <br> ve Tasarım</td>
+            <td rowspan="2"></td>
+            <td></td>
+            <td rowspan="2">BTE228 <br> Medya <br> Okuryazarlığı</td>
+            <td rowspan="2">BTO311 <br>İşletim  <br> Sistemleri</td>
+            <td rowspan="3">BTE311(BTÖ311) <br> İnternet Tabanlı <br>Programlama</td>
+            <td rowspan="4">BTÖ317 <br>Özel Öğretim <br>Yöntemleri I</td>
+
+        </tr>
+        <tr>
+            <th>2. Ders</th>
+            <td>09:40- <br>10:30</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>3. Ders</th>
+            <td>10:40- <br>11:30</td>
+            <td rowspan="2">BTE307 <br> Eğitimde <br> Modelleme <br> ve Tasarım</td>
+            <td></td>
+            <td></td>
+            <td rowspan="2">BTE313 <br> Eğitsel Video <br> Tasarımı</td>
+            <td rowspan="2">BTO311 <br>İşletim  <br> Sistemleri</td>
+
+        </tr>
+        <tr>
+            <th>4. Ders</th>
+            <td>11:40- <br>12:30</td>
+            <td></td>
+            <td rowspan="2">BTE309 <br>Bilişim <br> Öğretim <br> Programları </td>
+            <td rowspan="2">BTE311(BTÖ311) <br> İnternet Tabanlı <br>Programlama</td>
+
+        </tr>
+        <tr>
+            <th>5. Ders</th>
+            <td>12:40- <br>13:30</td>
+            <td></td>
+            <td></td>  
+            <td colspan="2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>6. Ders</th>
+            <td>13:40- <br>14:30</td>
+            <td rowspan="2">BTE307 <br> Eğitimde <br> Modelleme <br> ve Tasarım</td>
+            <td rowspan="2"></td>
+            <td rowspan="4"></td>
+            <td colspan="2"></td>
+            <td rowspan="2">BTE311(BTÖ311)<br>İnternet Tabanlı <br>Programlama</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>7. Ders</th>
+            <td>14:40- <br>15:30</td>
+            <td colspan="2"></td> 
+            <td></td>
+        </tr>
+        <tr>
+            <th>8. Ders</th>
+            <td>15:40- <br>16:30</td>
+            <td rowspan="2">BTE307 <br> Eğitimde <br> Modelleme <br> ve Tasarım</td>
+            <td rowspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <th>9. Ders</th>
+            <td>16:40- <br>17:30</td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+        </tr>
+    </tbody>
     </table>
 </body>
 </html>
