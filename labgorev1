@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Görevi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s ease;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #image-container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Arka plan rengini değiştirmek için renk dizisi
+            var backgroundColors = ["#ff9999", "#99ff99", "#9999ff", "#ffff99", "#ffcc99", "#cc99ff", "#99ccff", "#ffccff", "#ccffff", "#cccccc"];
+
+            // Sayfa yüklendiğinde arka plan rengini değiştir
+            document.body.style.backgroundColor = backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
+
+            // 10 farklı resim
+            var images = [
+                "a1.jpg",
+                "a2.jpg",
+                "a3.jpg",
+                "a4.jpg",
+                "a5.jpg",
+                "a6.jpg",
+                "a7.jpg",
+                "a8.jpg",
+                "a9.jpg",
+                "a10.jpg"
+            ];
+
+            // Rastgele bir resmi seç ve göster
+            function showRandomImage() {
+                var randomImage = images[Math.floor(Math.random() * images.length)];
+                document.getElementById("random-image").src = randomImage;
+            }
+
+            // 3 farklı resmi göster/gizle
+            function toggleImages() {
+                var imageContainer = document.getElementById("image-container");
+                for (var i = 0; i < imageContainer.children.length; i++) {
+                    var image = imageContainer.children[i];
+                    if (image.style.display === "none") {
+                        image.style.display = "block";
+                    } else {
+                        image.style.display = "none";
+                    }
+                }
+            }
+
+            // Butonlara olay dinleyicilerini ekle
+            document.getElementById("change-background").addEventListener("click", function() {
+                document.body.style.backgroundColor = backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
+            });
+
+            document.getElementById("show-images").addEventListener("click", function() {
+                toggleImages();
+            });
+
+            document.getElementById("random-image-btn").addEventListener("click", function() {
+                showRandomImage();
+            });
+        });
+    </script>
+
+    <button id="change-background">Arka Planı Değiştir</button>
+    <button id="show-images">Resimleri Göster/Gizle</button>
+    <button id="random-image-btn">Rastgele Resim</button>
+
+    <div id="image-container">
+        <img class="image" src="a2.jpg" alt="a">
+        <img class="image" src="a3.jpg" alt="a3">
+        <img class="image" src="a10.jpg" alt=" a10">
+    </div>
+
+    <img id="random-image" src="" alt="Rastgele Resim">
+
+</body>
+</html>
