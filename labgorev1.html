@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             height: 100vh;
             font-family: Arial, sans-serif;
@@ -24,14 +24,23 @@
 
         #image-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             width: 80%;
+            margin-top: 20px; 
         }
 
         .image {
-            max-width: 100%;
+            max-width: calc(33.33% - 10px); 
+            margin: 5px;
             height: auto;
             display: none;
+        }
+
+        #random-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px; 
         }
     </style>
 </head>
@@ -43,7 +52,6 @@
             var backgroundColors = ["#ff9999", "#99ff99", "#9999ff", "#ffff99", "#ffcc99", "#cc99ff", "#99ccff", "#ffccff", "#ccffff", "#cccccc"];
 
             document.body.style.backgroundColor = backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
-
 
             var images = [
                 "a1.jpg",
@@ -75,7 +83,6 @@
                 }
             }
 
-         
             document.getElementById("change-background").addEventListener("click", function() {
                 document.body.style.backgroundColor = backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
             });
@@ -88,7 +95,6 @@
                 showRandomImage();
             });
 
-          
             showRandomImage();
         });
     </script>
@@ -98,18 +104,19 @@
     <button id="random-image-btn">Rastgele Resim</button>
 
     <div id="image-container">
-        <img class="image" src="a3.jpg" alt="a1">
-        <img class="image" src="a8.jpg" alt="a2">
-        <img class="image" src="a9.jpg" alt="a3">
+        <img class="image" src="a6.jpg" alt="a6">
+        <img class="image" src="a7.jpg" alt="a7">
+        <img class="image" src="a8.jpg" alt="a8">
+        <img class="image" src="a1.jpg" alt="a1">
+        <img class="image" src="a2.jpg" alt="a2">
+        <img class="image" src="a4.jpg" alt="a4">
+        
+
+        
     </div>
 
     <img id="random-image" src="" alt="Rastgele Resim">
 
 </body>
 </html>
-
-
-
-
-
 
