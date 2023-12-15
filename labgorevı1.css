@@ -8,9 +8,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #4291ff;
-    padding: 30px;
-    border: 1px solid #baabff;
+    background-color: #574bff;
+    padding: 20px;
+    border: 1px solid #9ab0ff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     opacity: 0;
@@ -24,7 +24,7 @@ body {
 .close-button {
     position: absolute;
     top: -30px;
-    : 0px;
+    left: -12px;
     font-size: 20px;
     cursor: pointer;
 }
