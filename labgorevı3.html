@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10x10 farklı renkli kareler</title>
+  <style>
+    canvas {
+      border: 3px solid #f2ff00;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="benimCanvalar" width="500" height="500"></canvas>
+
+  <script>
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    var canvas = document.getElementById('benimCanvalar');
+    var ctx = canvas.getContext('2d');
+
+    var squareSize = canvas.width / 10;
+
+    for (var i = 0; i < 10; i++) {
+      for (var j = 0; j < 10; j++) {
+        var x = i * squareSize;
+        var y = j * squareSize;
+
+        var color = getRandomColor();
+
+        ctx.fillStyle = color;
+        ctx.fillRect(x, y, squareSize, squareSize);
+      }
+    }
+  </script>
+</body>
+</html>
