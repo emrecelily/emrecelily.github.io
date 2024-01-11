@@ -6,40 +6,41 @@
 <body>
 
 <h2>Futbolcu Lisans Kayıt Formu</h2>
+<table >
+    
+  <form method="get">
+          <tr>
+              <fieldset> 
+                  <legend>Hesap Bilgileriniz</legend>
+                   <label for="nameID">Adınız</label><br> 
+                   <input type="text" id="nameID" placeholder="Adınız" name="name"><br> 
+                  <label for="lisanstürünüz">Eposta</label><br> 
+                  <input type="lisanstürü" id="lisanstürü" name="eposta" placeholder="Futbolcu/antrenör"><br>
+                  <label for="lisansno">Lisans Numaranız</label><br> 
+                  <input type="lisans" id="lisansno" name="lisans" ><br>
+                   
+                  </fieldset> 
+          </tr>
+      
+         
+          <tr>
+              
+              <fieldset> 
+                  <legend>Kulüp Bilgileri</legend>
+                   <label for="nameID">Tesis Adı</label><br> 
+                   <input type="text" id="nameID" placeholder="Adınız" name="name"><br> 
+                   <label for="nameID">Bölge</label><br> 
+                   <input type="text" id="nameID" placeholder="Soyadınız" name="sname"><br> 
+                   
+                  </fieldset> 
+                  
+          </tr>
+      <br>
+          
+          <input type="submit" value="Kaydet"><br>
+  </form>
+</table>
 
-<form action="/kayit" method="post">
-  <div>
-    <label for="ad">Adı:</label>
-    <input type="text" id="ad" name="ad" required>
-  </div>
-  <div>
-    <label for="soyad">Soyadı:</label>
-    <input type="text" id="soyad" name="soyad" required>
-  </div>
-  <div>
-    <label for="takim">Takımı:</label>
-    <input type="text" id="takim" name="takim" required>
-  </div>
-  <div>
-    <label for="lisans_no">Lisans Numarası:</label>
-    <input type="text" id="lisans_no" name="lisans_no" required>
-  </div>
-  <div>
-    <label for="dogum_tarihi">Doğum Tarihi:</label>
-    <input type="date" id="dogum_tarihi" name="dogum_tarihi" required>
-  </div>
-  <div>
-    <label for="email">E-Posta Adresi:</label>
-    <input type="email" id="email" name="email" required>
-  </div>
-  <div>
-    <label for="telefon">Telefon Numarası:</label>
-    <input type="tel" id="telefon" name="telefon" required>
-  </div>
-  <div>
-    <input type="submit" value="Kayıt Yap">
-  </div>
-</form>
 
 </body>
 </html>
