@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>emrecelilyldrm</title>
     <style>
-          body {
+        body {
             margin: 0;
             overflow: hidden;
             font-family: 'Roboto', sans-serif;
@@ -55,6 +54,50 @@
                 transform: translateY(-100vh) rotate(360deg);
             }
         }
+
+        /* Eklenen CSS Kodları */
+        header {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            display: block;
+            margin: 5px 0;
+        }
+
+        nav ul li ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -74,23 +117,10 @@
         });
     </script>
 
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const particlesContainer = document.getElementById('particles-container');
-
-            for (let i = 0; i < 100; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                particle.style.left = Math.random() * 100 + 'vw';
-                particle.style.animationDuration = (Math.random() * 2 + 1) + 's';
-                particlesContainer.appendChild(particle);
-            }
-        });
-    </script>
     <header>
         <h1>Emre Celil Yıldırım</h1>
     </header>
+    
     <nav>
         <ul>
             <li>Hafta 2
@@ -119,48 +149,41 @@
                     <li><a href="gorev2.html">Kesişim Kümesi</a></li>
                 </ul>
             </li>
-                </ul>
             <li>Hafta 7
-            <ul>
-                <li><a href="gorev.html">Flex </a></li>
-                
-            </ul>
+                <ul>
+                    <li><a href="gorev.html">Flex </a></li>
+                </ul>
             </li>
-                 </ul>
             <li>Hafta 8
-            <ul>
-            <li><a href="odev1.html">Şekiller </a></li>
-            <li><a href="odev2.html">Bootstrap Deneme </a></li>  
-                 </ul>
-    </li>
-</ul>
+                <ul>
+                    <li><a href="odev1.html">Şekiller </a></li>
+                    <li><a href="odev2.html">Bootstrap Deneme </a></li>  
+                </ul>
+            </li>
             <li>Hafta 9
-            <ul>
-                <li><a href="labgorev1">Lab Görevi </a></li>
-                 </ul>
-    </li>
-</ul>
+                <ul>
+                    <li><a href="labgorev1">Lab Görevi </a></li>
+                </ul>
+            </li>
             <li>Hafta 10
-            <ul>
-                <li><a href="labgorevı1.html">Lab Görevi 1 </a></li>
-                <li><a href="labgorevı2.html">Lab Görevi 2 </a></li>
-                <li><a href="labgorevı3.html">Lab Görevi 3 </a></li>
-                 </ul>
-    </li>
-</ul>
-<li>Hafta 11
-    <ul>
-        <li><a href="gorev11.php">Lab Görevi 1 </a></li>
-        <li><a href="gorev12.php">Lab Görevi 2 </a></li>
-         </ul>
-</li>
-</ul>
-<li>Hafta 12
-    <ul>
-        <li><a href="gorev13.php">Lab Görevi 1 </a></li>
-         </ul>
-</li>
-</ul>
+                <ul>
+                    <li><a href="labgorevi1.html">Lab Görevi 1 </a></li>
+                    <li><a href="labgorevi2.html">Lab Görevi 2 </a></li>
+                    <li><a href="labgorevi3.html">Lab Görevi 3 </a></li>
+                </ul>
+            </li>
+            <li>Hafta 11
+                <ul>
+                    <li><a href="gorev11.php">Lab Görevi 1 </a></li>
+                    <li><a href="gorev12.php">Lab Görevi 2 </a></li>
+                </ul>
+            </li>
+            <li>Hafta 12
+                <ul>
+                    <li><a href="gorev13.php">Lab Görevi 1 </a></li>
+                </ul>
+            </li>
+        </ul>
     </nav>
 </body>
 </html>
